@@ -11,15 +11,31 @@
     --purple: #8253EA;
     --fuchsia: #FF427B;
     --mint: #2EFFC0;
+    --shadow: ;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer; 
 }
 
 body {
+    height: 100%;
+    width: 100%;
+    color: #000;
     font-family: var(--plain);
+}
+
+.header__text {
+    width: 60%;
+    margin: 4% 0 0 16%;
 }
 
 .header__hello {
     font-size: 4rem;
     font-weight: 300;
+    margin-bottom: 3rem;
 }
 
 .header__intro {
@@ -30,4 +46,77 @@ body {
 .header__intro-name {
     font-family: var(--fancy);
     font-size: 2rem;
+}
+
+.header__squiggle {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+    height: 40%;
+    margin: 0 4rem 2rem 0;
+    cursor: pointer;
+}
+
+#header__mint-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+}
+
+#header__purple-dots {
+    position: absolute;
+    left: 0;
+    top: 35%;
+}
+
+#header__fuchsia-dots {
+    position: absolute;
+    right: 0; 
+    top: 2rem;
+}
+
+/* navbar styles */
+.nav__logo {
+    margin: 2rem 0 0 2rem;
+    height: 4rem;
+    width: auto;
+}
+.nav__links {
+    list-style: none;
+}
+
+#about-link {
+    --color: var(--fuchsia);
+    text-shadow: 2px 2px 2px var(--color); 
+    transition: text-shadow ease-in-out 0.2s;
+}
+
+#work-link {
+    --color: var(--mint); 
+    text-shadow: 2px 2px 2px var(--color); 
+    transition: text-shadow ease-in-out 0.2s;
+}
+
+#contact-link {
+    --color: var(--purple); 
+    text-shadow: 2px 2px 2px var(--color); 
+    transition: text-shadow ease-in-out 0.2s;
+ }
+
+ 
+#about-link:hover, #work-link:hover, #contact-link:hover {
+    text-shadow: 5px 2px 5px var(--color); 
+}
+
+.nav__links.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    position: absolute; 
+    right: 5%;
+    bottom: 15%;
+    height: 50%;
+    font-size: 2rem;
+    margin-right: 2rem;
 }
