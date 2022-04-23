@@ -1,4 +1,33 @@
-h1 {
-    color: purple;
-    font-family: 'Ribeye Marrow';
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --plain: 'Raleway', sans-serif;
+    --fancy: 'Ribeye Marrow', serif;
+    --purple: #8253EA;
+    --fuchsia: #FF427B;
+    --mint: #2EFFC0;
+}
+
+body {
+    font-family: var(--plain);
+}
+
+.header__hello {
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.header__intro {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.header__intro-name {
+    font-family: var(--fancy);
+    font-size: 2rem;
 }
