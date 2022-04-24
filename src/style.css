@@ -33,9 +33,22 @@ span {
     font-weight: 300;
 }
 
+.section__content{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.section__dots {
+    position: absolute;
+    left: 0rem;
+    top: 10%;
+    z-index: -1;
+ }
+
 .section__header {
     margin-bottom: 1rem;
-    padding-left: 2rem;
+    margin-left: 5rem;
     width: 100%;
     font-weight: 300;
     font-size: 1.8rem;
@@ -51,9 +64,10 @@ header {
 }
 
 .header__text {
-    width: 60%;
-    margin: 8% 0 0 16%;
-    padding: 0 2rem;
+    position: relative;
+    top: 15%;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .header__hello {
@@ -86,21 +100,25 @@ header {
 }
 
 #header__mint-dots {
+    height: 25%;
     position: absolute;
-    left:40%;
-    bottom: 10%;
+    left: 40%;
+    bottom: 0;
+    margin-bottom: -2rem;
 }
 
 #header__purple-dots {
+    height: 25%;
     position: absolute;
     left: 0;
-    top: 35%;
+    top: 30%;
 }
 
 #header__fuchsia-dots {
+    height: 25%;
     position: absolute;
     right: 0; 
-    top: 2rem;
+    top: 0;
 }
 
 /* navbar styles */
@@ -246,20 +264,20 @@ header {
 }
 
 
-/* Header asides */
-.header {
-    position: relative;
+/* Sidebar asides */
+.sidebar {
+    position: absolute;
+    right: -3%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
     width: 15%;
-    height: 100%; 
     transform: rotate(90deg);
-    margin-right: -0.5rem;
+    top: 0;
+    margin-top: 15rem;
 }
 
-.header__title {
+.sidebar__title {
     font-family: var(--fancy);
     font-size: 8rem;
     height: auto;
@@ -267,68 +285,67 @@ header {
     font-weight: 400;
 }
 
-.header__dots {
+.sidebar__dots {
     transform: rotate(90deg);
 }
 
-.header__about {
+.sidebar__about {
     color: var(--fuchsia);
 }
 
-.header__work {
+.sidebar__work {
     color: #fff;
 }
 
-.header__contact {
+.sidebar__contact {
     color: var(--purple);
 }
 
-#header-about{
-    margin-top: 15rem;
+.sidebar__contact span {
+    color: #fff;
+    font-size: 8rem;
 }
 
-#header-contact{
-    margin-top: 8rem;
+#sidebar-work {
+    margin-top: 20rem;
+    transform: rotate(90deg) skewX(-4deg);
+    z-index: -1;
+}
+
+#sidebar-contact{
     z-index: 1;
+    margin-top: 20rem;
 }
 
 /* About section */
 .about {
     position: relative;
-    display: flex;
-    align-items: flex-start;
     width: 100%;
-    margin: 6rem 0 4rem 0;
+    margin: 10rem 0;
     overflow-x: clip;
 }
 
 .about__content {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+
 
 .about__photo{
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    top: 0;
-    margin: 0 2rem 1rem;
-}
-
-.about__dots {
-   width: 50%;
-   margin-left: -2rem;
-   z-index: -1;
+    width: 50%;
+    padding-right: 2rem; 
 }
 
 
 
 .about__headshot-container {
-    position: relative;
-    bottom: 8rem;
     height: auto;
 }
 
 .about__headshot {
+    margin-top: 2rem;
     border-radius: 100%;
     width: 100%;
     max-width: 650px;
@@ -336,7 +353,6 @@ header {
 
 .about__bio {
     width: 50%;
-    margin: 0 2rem 0 3rem;
 }
 
 .about__bio-title {
@@ -349,7 +365,7 @@ header {
 }
 
 .about__bio-text {
-    width: 90%;
+    margin-right: 2rem;
 }
 
 @media only screen and (max-width: 1024px){
@@ -370,7 +386,7 @@ header {
         margin-top: -10rem;
     }
 
-    #header-contact{
+    #sidebar-contact{
         margin-top: 10rem;
         z-index: 1;
     }
@@ -385,7 +401,7 @@ header {
         align-items: center;
     }
 
-    .header {
+    .sidebar {
         display: none;
     }
 
@@ -419,18 +435,17 @@ header {
     background-color: var(--fuchsia);
     transform: skewY(4deg);
     padding: 5% 0;
-    margin-top: 4rem;
+    margin: 4rem 0;
 }
 
 .tools__content {
     transform: skewY(-4deg);
-    margin: -8rem auto 0 auto; 
-    padding: 2rem 4rem;
-    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .tools__header {
-    margin: 4rem 0;
+    margin: 0 0 4rem 0;
+    padding-left: 0.5rem;
     color: #fff;
     font-weight: 300;
     font-size: 1.8rem;
@@ -444,14 +459,20 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fill, 90px);
     gap: 2.5rem;
-    justify-content: center;
     justify-items: center;
+    margin-bottom: 2rem;
 }
 
-
+.tools__grid-tool{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .tools__grid-name{
     padding-top: 0.5rem;
     font-weight: 500;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1024px){
@@ -481,14 +502,12 @@ header {
 }
 
 /* Work section */
-
-
 .work {
     width: 100%; 
     height: fit-content;
     background-color: var(--mint);
     transform: skewY(-4deg);
-    padding: 2rem 0;
+    padding: 5rem 0;
     margin-top: 10rem;
     overflow-x: clip;
 }
@@ -497,19 +516,15 @@ header {
     transform: skewY(4deg);
 }
 
-.work__header {
-    padding: 4rem 0 0 4rem;
-    margin: 0;
-}
 
-.work__flex {
-    display: flex;
+.work__dots {
+    transform: skewY(4deg);
 }
 
 .work__card {
     display: flex;
     width: 100%;
-    padding: 4rem;
+    padding: 1rem 0;
 }
 
 .work__card-content {
@@ -597,22 +612,21 @@ header {
 /* Contact section */
 .contact {
     position: relative;
+    margin: 5rem 0 8rem 0;
     width: 100%;
-    margin: 15rem 0 8rem 0;
     overflow-x: clip;
 }
 
-.contact__flex {
-    display: flex;
-    align-items: flex-start;
+.contact__dots{
+    position: absolute;
+    left: 0;
 }
 
-
 .contact__letter{
-    width: 50%;
-    max-width: 600px;
+    width: 60%;
+    max-width: 550px;
     font-size: 1.2rem;
-    margin: 3rem auto 3rem 4rem;
+    margin: 4rem auto 0 auto;
 }
 
 .contact__info {
@@ -630,17 +644,18 @@ header {
 #middle-background {
     position: relative;
     height:fit-content;
+    min-height: 300px;
 }
 
 #top-background {
-    transform: skewY(6deg);
+    transform: skewY(4deg);
     height: 10rem; 
     margin-bottom: -5rem;
     z-index: -5;
 }
 
 #bottom-background {
-    transform: skewY(-6deg);
+    transform: skewY(-4deg);
     height: 10rem; 
     margin-top: -5rem;
     z-index: -5;
@@ -689,22 +704,11 @@ header {
         margin-bottom: 5rem;
     }
 
-    .contact__dots{
-        position: absolute;
-        right: 0;
-        top: -2rem;
-        margin-right: -2rem;
-    }
 
     .contact__flex {
         display: block;
     }
 
-    .contact__header {
-        margin: 0;
-        padding-left: 1rem;
-        width: 70%;
-    }
 
     .contact__letter{
         width: 100%;
@@ -748,7 +752,6 @@ footer {
     align-items: center;
     background-color: var(--fuchsia);
     padding: 1rem 2rem;
-    margin-top: 4rem;
 }
 
 .footer__logo{
