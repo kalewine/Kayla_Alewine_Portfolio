@@ -75,5 +75,16 @@ gulp.task('watchTask', () => {
     gulp.watch('src/images/*.svg', browsersyncReload)
 })
 
+// Build task
+
+
 exports.default = gulp.series('html', 'css', 'js', 'imagemin', 'webp', browsersyncServe, 'watchTask')
 
+gulp.task('build', (cb) => {
+    runSequence('clean:dist', 
+      ['html', 'css', 'js', 'imagemin', 'webp'],
+      cb
+    )
+  })
+
+exports.build = build;
