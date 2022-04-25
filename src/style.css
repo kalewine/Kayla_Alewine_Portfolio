@@ -4,16 +4,17 @@
     box-sizing: border-box;
 }
 
-/* html {
+html {
     scroll-behavior: smooth;
-} */
+}
 
 :root {
     --plain: 'Raleway', sans-serif;
     --fancy: 'Ribeye Marrow', serif;
     --purple: #8253EA;
     --fuchsia: #FF427B;
-    --mint: #2EFFC0;
+    /* --mint: #2EFFC0; */
+    --mint: #6cfacb;
     --shadow: ;
 }
 
@@ -123,6 +124,10 @@ header {
 }
 
 .nav__squiggle-container {
+    height: 100%;
+}
+
+.nav__squiggle-container.home {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,6 +140,11 @@ header {
 }
 
 .header__squiggle {
+    display: none;
+}
+
+.header__squiggle.home {
+    display: block;
     height: 13rem;
     animation: float infinite 4s; 
 }
@@ -175,30 +185,51 @@ header {
 }
 
 /* navbar styles */
+nav.scrolled{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
 .nav__logo {
-    margin: 2rem 0 0 2rem;
-    height: 4rem;
+    margin: 1rem 1rem 1rem 2rem;
+    height: 3rem;
     width: auto;
 }
 
-
 .nav__links {
+    display: flex;
     list-style: none;
+    height: 100%;
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    /* border: solid orange;    */
 }
 
 .nav__links.home {
     position: relative;
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-end;
     height: 100%;
-    /* width: 50%; */
     font-size: 2rem;
     margin-right: 2rem;
-    /* transition: transform ease 0.5s; */
+    /* transition: all ease 0.5s; */
 }
 
+.nav__link.home {
+    padding: 0; 
+}
+
+.nav__link {
+    padding: 0 1rem;
+}
 .nav__link:hover {
     animation: wave 0.5s;
     /* transform: scale(1.2); 
@@ -282,7 +313,7 @@ header {
     }
     
 
-    .nav__squiggle-container {
+    .nav__squiggle-container.home {
         height: 30%; 
         margin-right: 2rem;
     }
@@ -321,7 +352,7 @@ header {
         font-size: 8vw;
     }
 
-    .nav__squiggle-container {
+    .nav__squiggle-container.home {
         width: 100%;
         justify-content: flex-end;
         bottom: 0;  
@@ -329,7 +360,7 @@ header {
         margin-right: 0rem;
     }
 
-    .header__squiggle {
+    .header__squiggle.home {
         height: 50vw; 
         margin-right: -2rem;
     }
@@ -720,9 +751,18 @@ header {
         padding: 1rem;
     }
 
+    .work__card-header {
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
 
     .work__card-content {
         padding: 1rem 0;
+    }
+
+    .work__card-text {
+        padding-left: 0.5rem;
     }
 
     .work__card-button{
