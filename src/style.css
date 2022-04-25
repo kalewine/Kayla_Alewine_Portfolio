@@ -403,11 +403,15 @@ header {
     }
 
     .about__flex{
-        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__bio {
+        width: 80%;
     }
 
-
     .about__photo {
+        width: 80%;
         padding-right: 0;
     }
 
@@ -418,12 +422,7 @@ header {
     .about__headshot{
         margin-top: 0;
     }
-   
 
-    #sidebar-contact{
-        margin-top: 10rem;
-        z-index: 1;
-    }
 }
 
 @media only screen and (max-width: 640px){
@@ -494,7 +493,9 @@ header {
     grid-template-columns: repeat(auto-fill, 90px);
     gap: 2.5rem;
     justify-items: center;
+    justify-content: center;
     margin-bottom: 2rem;
+    grid-auto-flow: dense;
 }
 
 .tools__grid-tool{
@@ -511,17 +512,20 @@ header {
 
 @media only screen and (max-width: 1024px){
     .tools__header {
-        margin-top: 6rem;
+        margin-top: 4rem;
+        padding-left: 1.5rem;
     }
+
+    .tools__grid {
+        grid-template-columns: repeat(auto-fill, 70px);
+        gap: 2rem;
+    }
+
+    
 }
 
 @media only screen and (max-width: 640px){
-    .tools__content{
-        padding: 2rem; 
-    }
-
     .tools__header {
-        margin-top: 8rem;
         font-size: 1.5rem;
     }
 
@@ -529,10 +533,7 @@ header {
         font-size: 1.8rem;
     }
 
-    .tools__grid {
-        grid-template-columns: repeat(auto-fill, 70px);
-        gap: 2rem;
-    }
+    
 }
 
 /* Work section */
@@ -616,8 +617,9 @@ header {
   }
 
   .work__card-button:active {
-      transform: rotateY(180deg);
+    transform: rotateY(360deg);
   }
+
 
 
 @media only screen and (max-width: 1024px){
@@ -638,6 +640,10 @@ header {
  
     .work__card-content, .work__card-img-container {
         width: 100%;
+    }
+
+    .work__card-content {
+        padding-top: 2rem;
     }
 
     
@@ -738,13 +744,10 @@ header {
 
 
 @media only screen and (max-width: 1024px){
-    .contact {
-        margin-top: 10rem;
+    .contact__info {
+      margin-top: 8rem;
     }
 
-    .contact__letter{
-        margin-left: 3rem;
-    }
 
 }
 
