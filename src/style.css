@@ -196,35 +196,68 @@ header {
     /* width: 50%; */
     font-size: 2rem;
     margin-right: 2rem;
+    /* transition: transform ease 0.5s; */
 }
 
 .nav__link:hover {
-    transform: scale(1.2)
+    animation: wave 0.5s;
+    /* transform: scale(1.2); 
+    transition: transform ease 0.5s; */
 }
+
+
+  @keyframes wave {
+    0% {
+      transform:translateY(0px)
+    }
+    50% {
+      transform:translateY(-10px);
+    }
+    100% {
+      transform:translateY(0px) 
+    }
+  }
+  /*
+  .back span:nth-child(1) {
+    animation-delay:0s;
+  }
+  .back span:nth-child(2) {
+    animation-delay:.1s;  
+  }
+  .back span:nth-child(3) {
+    animation-delay:.2s;
+  }
+  .back span:nth-child(4) {
+    animation-delay:.3s;  
+  }
+  .back span:nth-child(5) {
+    animation-delay:.4s;
+  }
+  .back span:nth-child(6) {
+    animation-delay:.5s;  
+  }
+  .back span:nth-child(7) {
+    animation-delay:.6s;
+  } */
 
 
 #about-link {
     --color: var(--fuchsia);
     text-shadow: 2px 2px 2px var(--color); 
-    transition: text-shadow ease-in-out 0.2s;
 }
 
 #work-link {
     --color: var(--mint); 
     text-shadow: 2px 2px 2px var(--color); 
-    transition: text-shadow ease-in-out 0.2s;
 }
 
 #contact-link {
     --color: var(--purple); 
     text-shadow: 2px 2px 2px var(--color); 
-    transition: text-shadow ease-in-out 0.2s;
  }
 
  
-#about-link:hover, #work-link:hover, #contact-link:hover {
-    text-shadow: 10px 5px 10px var(--color); 
-}
+
 
 
 
@@ -738,6 +771,7 @@ header {
 #middle-background {
     position: relative;
     height:fit-content;
+    padding-bottom: 4rem;
 }
 
 #top-background {
@@ -787,11 +821,9 @@ header {
         margin-top: 3rem;
     }
 
-
     .contact__flex {
         display: block;
     }
-
 
     .contact__letter{
         width: 100%;
@@ -822,10 +854,11 @@ header {
     #top-background {
         height: 7rem; 
     }
-    
-    #bottom-background {
-        height: 7rem; 
+
+    #middle-background {
+        padding-bottom: 0;
     }
+    
 
 }
 

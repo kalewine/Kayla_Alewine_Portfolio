@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const uglify = require('gulp-uglify');
 const webp = require("gulp-webp");
 const squoosh = require('gulp-libsquoosh');
-const minify = require('gulp-minify-css');
+const minify = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const htmlmin = require('gulp-htmlmin');
 const { watch } = require('browser-sync');
@@ -75,16 +75,6 @@ gulp.task('watchTask', () => {
     gulp.watch('src/images/*.svg', browsersyncReload)
 })
 
-// Build task
-
 
 exports.default = gulp.series('html', 'css', 'js', 'imagemin', 'webp', browsersyncServe, 'watchTask')
 
-gulp.task('build', (cb) => {
-    runSequence('clean:dist', 
-      ['html', 'css', 'js', 'imagemin', 'webp'],
-      cb
-    )
-  })
-
-exports.build = build;
