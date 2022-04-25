@@ -15,9 +15,9 @@
 <body>
     <header>
         <nav>
-            <img class="nav__logo" src="images/kayla-alewine-logo.svg" alt="letter K over letter A initials for Kayla Alewine">
+            <a href="#"><img class="nav__logo" src="images/kayla-alewine-logo.svg" alt="letter K over letter A initials for Kayla Alewine"></a>
             <div class="nav__squiggle-container">
-                <img class="header__squiggle" src="images/downward-squiggle-arrow.svg" alt=""> 
+                <a href="#about"><img class="header__squiggle" src="images/downward-squiggle-arrow.svg" alt=""></a>
                 <ul class="nav__links home">
                     <li class="nav__link" ><a href="#about" id="about-link">About</a></li>
                     <li class="nav__link" ><a href="#work" id="work-link">My Work</a></li>
@@ -31,43 +31,45 @@
         </article>
         
 
-        <img id="header__mint-dots" src="images/mint-dot-grid.svg" alt="">
-        <img id="header__purple-dots" src="images/purple-dot-grid.svg" alt="">
-        <img  id="header__fuchsia-dots"src="images/fuchsia-dot-grid.svg" alt="">
+        <img class="header__dots" id="header__mint-dots" src="images/mint-dot-grid.svg" alt="">
+        <img class="header__dots" id="header__purple-dots" src="images/purple-dot-grid.svg" alt="">
+        <img class="header__dots" id="header__fuchsia-dots"src="images/fuchsia-dot-grid.svg" alt="">
     </header>
     <main>
         
         <section class="about" id="about">    
             <img  class="section__dots" src="images/fuchsia-dot-grid.svg" alt="">
-            <div class="section__content about__content">
-                <article class="about__photo">
-                    <h2 class="section__header">About <span>Kayla</span></h2>
-                    <picture class="about__headshot-container">
-                        <source type="image/webp"
-                                sizes="(max-width: 640px)80vw, 25vw"
-                                srcset="images/webp/headshot.webp 360w"
-                        >
-                        <img 
-                            class="about__headshot"
-                            sizes="(max-width: 640px)80vw, 25vw"
-                            srcset="images/headshot.jpg 360w"
-                            src="images/headshot.jpg " 
-                            alt=""
-                        >
-                    </picture> 
-                </article/>
-            
-                <article class="about__bio">
-                    <h3 class="about__bio-title">From Educator to<br> <span>Web Developer</span></h3>
-                    <p class="about__bio-text">I enjoy a challenge - solving problems, bringing order to chaos, creating something useful to others. I became an educator for those reasons, and those are the reasons I am now a web developer.<br><br>
+            <div class="section__content">
+                <h2 class="section__header">About <span>Kayla</span></h2>
+                <div class="about__flex">
+                    <article class="about__photo">
+                        <picture class="about__headshot-container">
+                            <source type="image/webp"
+                                    sizes="(max-width: 640px)80vw, 20vw"
+                                    srcset="images/webp/headshot.webp 360w"
+                            >
+                            <img 
+                                class="about__headshot"
+                                sizes="(max-width: 640px)80vw, 20vw"
+                                srcset="images/headshot.jpg 360w"
+                                src="images/headshot.jpg " 
+                                alt=""
+                            >
+                        </picture> 
+                    </article/>
+                
+                    <article class="about__bio">
+                        <h3 class="about__bio-title">From Educator to<br> <span>Web Developer</span></h3>
+                        <p class="about__bio-text">I enjoy a challenge - solving problems, bringing order to chaos, creating something useful to others. I became an educator for those reasons, and those are the reasons I am now a web developer.<br><br>
 
-                        In 2017, I began dabbling in code. To my surprise, I loved it. I loved the order and structure of HTML and the artistry and magic of CSS. As I continued to delve into coding, I found satisfaction in using the logic of Javascript to make things happen.<br><br>
-                        
-                        At the end 2020, I began studying to be a web developer. I worked through Codecademy’s front end developer course, supplementing along the way with resources from Kevin Powell, Traversey Media, Coding Train and Stephen Grider. As is often the case, I learned the most from the things I built myself. This portfolio showcases a few.<br><br>
-                        
-                        I’m excited to continue to learn and grow as a software developer as I take my first steps into this industry.
-                        </p>
-                </article>
+                            In 2017, I began dabbling in code. To my surprise, I loved it. I loved the order and structure of HTML and the artistry and magic of CSS. As I continued to delve into coding, I found satisfaction in using the logic of Javascript to make things happen.<br><br>
+                            
+                            At the end 2020, I began studying to be a web developer. I worked through Codecademy’s front end developer course, supplementing along the way with resources from Kevin Powell, Traversey Media, Coding Train and Stephen Grider. As is often the case, I learned the most from the things I built myself. This portfolio showcases a few.<br><br>
+                            
+                            I’m excited to continue to learn and grow as a software developer as I take my first steps into this industry.
+                            </p>
+                    </article>
+                </div>
             </div>
             <aside class="sidebar" id="sidebar-about">
                 <img class="sidebar__dots" src="images/fuchsia-dot-grid.svg" alt="">
@@ -379,12 +381,12 @@
                     </div>
                 </div>
                 </div>
-                <div class="contact__info-background" id="bottom-background"></div>
+                
             </article>
         </section>
     </main>
     <footer>
-        <img class="footer__logo" src="images/kayla-alewine-logo.svg" alt="">
+        <a href="#"><img class="footer__logo" src="images/kayla-alewine-logo.svg" alt=""></a>
         <p class="footer__text">Designed and Built By Kayla Alewine | 2022</p>
     </footer>
 </body>
