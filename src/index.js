@@ -1,5 +1,6 @@
 // navbar from home section
 const nav = document.querySelector('nav');
+const navLogo = document.getElementsByClassName('nav__logo')
 const squiggle = document.getElementsByClassName('header__squiggle');
 const squiggleContainer = document.getElementsByClassName('nav__squiggle-container');
 const navLinks = document.getElementsByClassName('nav__links');
@@ -21,6 +22,9 @@ const leaveHome = new IntersectionObserver ((entries, leaveHome) => {
             //     })
             // })
             nav.classList.remove('scrolled');
+            Array.from(navLogo).forEach(element => {
+                element.classList.add('home')
+            })
             Array.from(squiggleContainer).forEach(element => {
                 element.classList.add('home')
             })
@@ -42,6 +46,9 @@ const leaveHome = new IntersectionObserver ((entries, leaveHome) => {
             //     })
             // })
             nav.classList.add('scrolled');
+            Array.from(navLogo).forEach(element => {
+                element.classList.remove('home')
+            })
             Array.from(squiggleContainer).forEach(element => {
                 element.classList.remove('home')
             })
