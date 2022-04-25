@@ -66,6 +66,33 @@ span {
     .section__dots {
         margin-left: -2rem;
      }
+}
+
+
+@media only screen and (max-width: 640px){
+    .section__content{
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .section__header {
+        font-size: 2.2rem;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .section__header span {
+        font-size: 2.5rem;
+    }
+
+    .section__dots{
+        left: revert;
+        right: 0;
+        top: 0;
+        margin-left: 0;
+        margin-right: -8rem;
+
+    }
 
 }
 
@@ -241,46 +268,44 @@ header {
     }
     
     #header__purple-dots {
-        position: absolute;
-        left: 0;
-        top: 60%;
-    }
-    
-    #header__fuchsia-dots { 
-        width: 40%;
-        top: 0;
+        top: 80%;
     }
 
+
     .header__text {
-        width: 90%;
-        margin: 15% 0 0 0.5rem;
+        width: 100%;
+        padding: 0 1rem;
+        margin: 0;
     }
     
     .header__hello {
-        font-size: 3rem;
+        font-size: 15vw;
         margin-bottom: 2rem;
     }
 
     
     .header__intro {
-        font-size: 1.5rem;
+        font-size: 8vw;
     }
 
     .nav__squiggle-container {
         width: 100%;
-        justify-content: space-around;
+        justify-content: flex-end;
         bottom: 0;  
         height: 30%; 
         margin-right: 0rem;
     }
 
+    .header__squiggle {
+        height: 50vw; 
+        margin-right: -2rem;
+    }
+    
 
     .nav__links.home{
-        font-size: 2rem;
+        font-size: 8vw;
         margin-right: 1rem;
     }
-
-
 
 }
 
@@ -427,7 +452,7 @@ header {
 
 @media only screen and (max-width: 640px){
     .about {
-        margin-top: 0;
+        margin-top: 2rem;
     }
 
     .about__content {
@@ -438,25 +463,24 @@ header {
         display: none;
     }
 
+    .about__photo {
+         width: 100%;
+     }
+
     .about__headshot-container{
-        margin: 2rem 0;
-    }
-
-    .section__header {
-        font-size: 2.2rem;
-    }
-
-    .section__header span {
-        font-size: 2.5rem;
+        margin: 1rem 0;
     }
 
     .about__bio {
-        width: 90%;
-        margin-top: -12rem;
+        width: 100%;
     }
 
     .about__bio-text {
         width: 100%;
+    }
+
+    .about__bio-title{
+        margin-bottom: 1rem;
     }
 }
 
@@ -512,7 +536,8 @@ header {
 
 @media only screen and (max-width: 1024px){
     .tools__header {
-        margin-top: 4rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
         padding-left: 1.5rem;
     }
 
@@ -646,12 +671,15 @@ header {
         padding-top: 2rem;
     }
 
-    
 }
 
 @media only screen and (max-width: 640px){
-    .work__header {
-        width: 70%;
+    .work {
+        padding: 2rem 0;
+    }
+
+    .work__cards {
+        margin-right: 0;
     }
 
     .work__card {
@@ -659,16 +687,20 @@ header {
         padding: 1rem;
     }
 
+
     .work__card-content {
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 1rem 0;
+    }
+
+    .work__card-button{
+        padding: 1rem;
+        font-size: 1rem;
     }
 
     .work__dots {
-       position: absolute;
-       right: 0;
-       top: 0;
-       margin-right: -2rem;
+        top: 2%;
     }
+
 }
 
 /* Contact section */
@@ -706,7 +738,6 @@ header {
 #middle-background {
     position: relative;
     height:fit-content;
-    min-height: 300px;
 }
 
 #top-background {
@@ -753,8 +784,7 @@ header {
 
 @media only screen and (max-width: 640px){
     .contact {
-        margin-top: 5rem;
-        margin-bottom: 5rem;
+        margin-top: 3rem;
     }
 
 
@@ -766,7 +796,7 @@ header {
     .contact__letter{
         width: 100%;
         margin-left: 1rem;
-        padding-right: 2rem;
+        padding-right: 1rem;
     }
 
     .contact__info {
@@ -781,7 +811,8 @@ header {
 
     .contact__info-content{
         width: 100%;
-        padding: 2rem 2rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
     }
 
     .contact__info-method{
