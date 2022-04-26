@@ -902,6 +902,7 @@ nav.scrolled{
 
     .work__card {
         flex-direction: column;
+        align-items: center;
         padding: 2rem;
     }
 
