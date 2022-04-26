@@ -8,66 +8,29 @@ const navLinks = document.getElementsByClassName('nav__links');
 const navLink = document.getElementsByClassName('nav__link');
 const target = document.querySelector('.header__text');
 
-const toggleHome = [squiggle, squiggleContainer, navLinks];
+const toggleHome = [navLogo, navToggle,squiggle, squiggleContainer, navLinks, navLink];
 
 const leaveHomeOptions = {
-    threshold: 1.0
+    
 }
 
 const leaveHome = new IntersectionObserver ((entries, leaveHome) => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
-            // toggleHome.forEach(items=> {
-            //     Array.from(items).forEach(item => {
-            //         item.classList.add('home')
-            //     })
-            // })
+            toggleHome.forEach(items=> {
+                Array.from(items).forEach(item => {
+                    item.classList.add('home')
+                })
+            })
             nav.classList.remove('scrolled');
-            Array.from(navLogo).forEach(element => {
-                element.classList.add('home')
-            })
-            Array.from(navToggle).forEach(element => {
-                element.classList.add('home')
-            })
-            Array.from(squiggleContainer).forEach(element => {
-                element.classList.add('home')
-            })
-            Array.from(squiggle).forEach(element => {
-                element.classList.add('home')
-            })
-            Array.from(navLinks).forEach(element => {
-                element.classList.add('home')
-            })
-            Array.from(navLink).forEach(element => {
-                element.classList.add('home')
-            })
-
-            
         }else if (!entry.isIntersecting){
-            // toggleHome.forEach(items=> {
-            //     Array.from(items).forEach(item => {
-            //         item.classList.remove('home')
-            //     })
-            // })
+            
+            toggleHome.forEach(items=> {
+                Array.from(items).forEach(item => {
+                    item.classList.remove('home')
+                })
+            })
             nav.classList.add('scrolled');
-            Array.from(navToggle).forEach(element => {
-                element.classList.remove('home')
-            })
-            Array.from(navLogo).forEach(element => {
-                element.classList.remove('home')
-            })
-            Array.from(squiggleContainer).forEach(element => {
-                element.classList.remove('home')
-            })
-            Array.from(squiggle).forEach(element => {
-                element.classList.remove('home')
-            })
-            Array.from(navLinks).forEach(element => {
-                element.classList.remove('home')
-            })
-            Array.from(navLink).forEach(element => {
-                element.classList.remove('home')
-            })
         }
     })
 }, leaveHomeOptions)
