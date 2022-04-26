@@ -316,9 +316,9 @@ nav.scrolled{
     text-shadow: 2px 2px 1px var(--color); 
  }
 
- 
-
-
+ .nav__toggle {
+     display: none;
+ }
 
 
 @media only screen  and (max-width: 1024px){ 
@@ -382,7 +382,7 @@ nav.scrolled{
     }
 
     .nav__squiggle-container.home {
-        width: 100%;
+        width: 60%;
         justify-content: flex-end;
         bottom: 0;  
         height: 30%; 
@@ -396,9 +396,93 @@ nav.scrolled{
     
 
     .nav__links.home{
+        display: flex;
         font-size: 8vw;
         margin-right: 1rem;
+        padding: 0;
     }
+
+    .nav__links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 8rem 5rem 30% 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 100vh;
+        background: white;
+        width: 100%; 
+        z-index: -1;
+        /* transform: translateX(110%); */
+        transition: transform 500ms ease;
+    }
+
+    .nav__link {
+        font-size: 3rem;
+    }
+
+    .nav__toggle.home{
+        display: none;
+    }
+        
+    .nav__toggle{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative; 
+        height: auto;
+        right: 15px;
+        top: 0;  
+        transition: all 300ms ease-in-out;
+        padding: 1rem 0 1rem 1rem;
+        cursor: pointer; 
+        margin-right: 2rem;
+    }
+
+    .nav__toggle-bar {
+        display: block;
+        width: 35px; 
+        height: 5px; 
+        margin: 2px auto;
+        transition: all 300ms ease-in-out;
+        border-radius: 4px;
+    }
+
+    .nav__toggle-bar:nth-child(1){
+        background-color: var(--fuchsia) ;
+    }
+
+    .nav__toggle-bar:nth-child(2){
+        background-color: var(--mint) ;
+    }
+
+    .nav__toggle-bar:nth-child(3){
+        background-color: var(--purple) ;
+    }
+    
+
+    #toggle-btn.is-active .nav__toggle-bar:nth-child(2) {
+        opacity: 0; 
+    }
+
+    #toggle-btn.is-active .nav__toggle-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    #toggle-btn.is-active .nav__toggle-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    
+/* .nav__menu {
+    display: block;
+    width: 100%; 
+    height: 100%;
+    transition: border-bottom 300ms ease 250ms;
+} */
+
 
 }
 
@@ -686,7 +770,7 @@ nav.scrolled{
 }
 
 .work__card-content {
-    width: 45%;
+    width: 50%;
     padding: 0 1rem;
 }
 
@@ -697,19 +781,19 @@ nav.scrolled{
     color: var(--purple);
 }
 
-.work__card-images {
- position: relative;
+.work__card-img-container {
+  position: relative;
   display: flex;
-  border: solid 2px;
-  height: auto;
-  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
 }
 
 .work__card-img { 
-    /* position: absolute; */
-    width: 200px;
-    height: auto;
+    max-width: 450px;
 }
+
+
 
 .work__card-text {
     margin-right: 0.5rem;

@@ -15,7 +15,7 @@
 <body>
     <header id="home">
         <nav>
-            <a href="#home"><img class="nav__logo" src="images/kayla-alewine-logo-colorful.svg" alt="letter K over letter A initials for Kayla Alewine"></a>
+            <a href="#home"><img class="nav__logo" src="images/kayla-alewine-logo.svg" alt="letter K over letter A initials for Kayla Alewine"></a>
             <div class="nav__squiggle-container home">
                 <a href="#about"><img class="header__squiggle home" src="images/downward-squiggle-arrow.svg" alt="thin squiggly black down arrow"></a>
                 <ul class="nav__links home">
@@ -23,6 +23,11 @@
                     <li class="nav__link home" ><a href="#work" id="work-link">Work</a></li>
                     <li class="nav__link home"><a href="#contact"  id="contact-link">Contact</a></li>
                 </ul>
+                <div class="nav__toggle" onclick="toggleMenu()" id="toggle-btn">
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                </div> 
             </div>
         </nav>
         <article class="header__text">
@@ -34,10 +39,10 @@
         <img class="header__dots" id="header__mint-dots" src="images/mint-dot-grid.svg" alt="mint green colored square dot grid">
         <img class="header__dots" id="header__purple-dots" src="images/purple-dot-grid.svg" alt="purple colored square dot grid">
         <img class="header__dots" id="header__fuchsia-dots"src="images/fuchsia-dot-grid.svg" alt="fuchsia colored square dot grid">
-    </header id="about">
+    </header >
     <main>
         
-        <section class="about" >    
+        <section class="about" id="about">    
             <img  class="section__dots" src="images/fuchsia-dot-grid.svg" alt="fuchsia colored square dot grid">
             <div class="section__content">
                 <h2 class="section__header">About <span>Kayla</span></h2>
@@ -298,94 +303,74 @@
                 <h2 class="section__header"> <span>Cool Stuff </span>I've Built</h2>
                 <div class="work__cards">
                     <article class="work__card">
-                        <div class="work__card-images">
-                            <picture class="work__card-img-container">
-                                <source type="image/webp"
-                                        srcset="images/webp/pisgah-climbing-school-climbing-tablet.webp"
+                        <picture class="work__card-img-container">
+                            <source type="image/webp"
+                                    sizes="40vw"
+                                    srcset="images/webp/pisgah-climbing-school-screens@1x.webp 480w, 
+                                    images/webp/pisgah-climbing-school-screens@2x.webp 700w"
+                                    >
+                            <img 
+                                class="work__card-img"
+                                srcset="images/pisgah-climbing-school-screens@1x.png 480w, 
+                                images/pisgah-climbing-school-screens@2x.png 700w"
+                                src="images/pisgah-climbing-school-screens@1x.png" 
+                                sizes="40vw"
+                                alt="Pisgah Climbing School climbing page on tablet, landing page on desktop, blog page on mobile" 
                                 >
-                                <img src="images/pisgah-climbing-school-climbing-tablet.png" alt="screenshot of Pisgah Climbing School climbing page on tablet" class="work__card-img">
-                            </picture>
-                            <picture class="work__card-img-container">
-                                <source type="image/webp"
-                                        srcset="images/webp/pisgah-climbing-school-homepage-desktop.webp"
-                                >
-                                <img src="images/pisgah-climbing-school-homepage-desktop.png" alt="screenshot of Pisgah Climbing School landing page on desktop" class="work__card-img">
                             </picture>
                             
-                            <picture class="work__card-img-container">
-                                <source type="image/webp"
-                                        srcset="images/webp/pisgah-climbing-school-blog-mobile.webp"
-                                >
-                                <img src="images/pisgah-climbing-school-blog-mobile.png" alt="screenshot of Pisgah Climbing School blog page on mobile" class="work__card-img">
-                            </picture>
-                        </div>
-                        <div class="work__card-content">
-                            <h3 class="work__card-header">Climbing Company’s 
-                                Internet Debut </h3>
-                            <p class="work__card-text">I designed and built this website for a startup climbing company: Pisgah Climbing School of North Carolina. This is a responsive, full stack application built using HTML5, CSS3, JavaScript and Node.js/Express.js. It includes custom booking and contact forms and utilizes the Facebook and Blogger APIs. Since it is a business website, SEO is important. I used Semrush, Google Analytics, and Google Lighthouse audits to guide SEO.</p>
-                            <div class="work__card-buttons">
-                                <a href="https://www.pisgahclimbingschool.com/" target="_blank" rel="noopener" class="work__card-button">Visit Site</a>
-                                <a href="" target="_blank" rel="noopener" class="work__card-button">View Repo</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="work__card" id="center-card">
-                        <div class="work__card-content" >
-                            <h3 class="work__card-header">Non-Profit Platypus Adventures’ Home on the Web</h3>
-                            <p class="work__card-text">Platypus Adventures is a non-profit organization that plans and organizes adaptive events for youth with developmental disabilities. I designed and built this website for the company to have a fun, welcoming and accesible home on the web.  I utilized the Userway accesibility plug-in and  carefully built the site using WebAIM principles. </p>
-                            <div class="work__card-buttons">
-                                <a href="https://www.platypusadventures.org/" target="_blank" rel="noopener" class="work__card-button">Visit Site</a>
-                                <a href="" target="_blank" rel="noopener" class="work__card-button">View Repo</a>
-                            </div>
-                        </div>
-                        <div class="work__card-images">
-                            <picture class="work__card-img-container">
-                                <source type="image/webp"
-                                        srcset="images/webp/platypus-adventures-work-tablet.webp"
-                                >
-                                <img src="images/platypus-adventures-work-tablet.png" alt="screenshot of Platypus Adventures work page on tablet" class="work__card-img">
-                            </picture>
-                            <picture class="work__card-img-container">
-                                <source type="image/webp"
-                                        srcset="images/webp/platypus-adventures-home-mobile.webp"
-                                >
-                                <img src="images/platypus-adventures-home-mobile.png" alt="screenshot of Platypus Adventures landing page on mobile" class="work__card-img">
-                            </picture>
-                        </div>
-                    </article>
-                    <article class="work__card">
-                        <div class="work__card-images">
-                            <picture class="work__card-img-container">
-                                <source type="image/webp"
-                                        srcset="images/webp/team-up-edit-player.webp"
-                                >
-                                <img src="images/team-up-edit-player.png" alt="screenshot of Team Up app edit player screen on mobile" class="work__card-img">
-                            </picture>
-                            <picture class="work__card-img-container">
-                                <source type="image/webp"
-                                        srcset="images/webp/team-up-manage-players.webp"
-                                >
-                                <img src="images/team-up-manage-players.png" alt="screenshot of Team Up app manage players screen on mobile" class="work__card-img">
-                            </picture>
-                            <picture class="work__card-img-container">
-                                <source type="image/webp"
-                                        srcset="images/webp/team-up-teams.webp"
-                                >
-                                <img src="images/team-up-teams.png" alt="screenshot of Team Up app generated teams screen on mobile" class="work__card-img">
-                            </picture>
-                            <picture class="work__card-img-container">
-                                <source type="image/webp"
-                                        srcset="images/webp/team-up-swap.webp"
-                                >
-                                <img src="images/team-up-swap.png" alt="screenshot of Team Up app swap player screen on mobile" class="work__card-img">
-                            </picture>
-                            <picture class="work__card-img-container">
-                                <source type="image/webp"
-                                        srcset="images/webp/team-up-home.webp"
-                                >
-                                <img src="images/team-up-home.png" alt="screenshot of Team Up app home on mobile" class="work__card-img">
-                            </picture>
-                        </div>
+                            <div class="work__card-content">
+                                <h3 class="work__card-header">Climbing Company’s 
+                                    Internet Debut </h3>
+                                    <p class="work__card-text">I designed and built this website for a startup climbing company: Pisgah Climbing School of North Carolina. This is a responsive, full stack application built using HTML5, CSS3, JavaScript and Node.js/Express.js. It includes custom booking and contact forms and utilizes the Facebook and Blogger APIs. Since it is a business website, SEO is important. I used Semrush, Google Analytics, and Google Lighthouse audits to guide SEO.</p>
+                                    <div class="work__card-buttons">
+                                        <a href="https://www.pisgahclimbingschool.com/" target="_blank" rel="noopener" class="work__card-button">Visit Site</a>
+                                        <a href="" target="_blank" rel="noopener" class="work__card-button">View Repo</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="work__card" id="center-card">
+                                <div class="work__card-content" >
+                                    <h3 class="work__card-header">Non-Profit Platypus Adventures’ Home on the Web</h3>
+                                    <p class="work__card-text">Platypus Adventures is a non-profit organization that plans and organizes adaptive events for youth with developmental disabilities. I designed and built this website for the company to have a fun, welcoming and accesible home on the web.  I utilized the Userway accesibility plug-in and  carefully built the site using WebAIM principles. </p>
+                                    <div class="work__card-buttons">
+                                        <a href="https://www.platypusadventures.org/" target="_blank" rel="noopener" class="work__card-button">Visit Site</a>
+                                        <a href="" target="_blank" rel="noopener" class="work__card-button">View Repo</a>
+                                    </div>
+                                </div>
+                                <picture class="work__card-img-container">
+                                    <source type="image/webp"
+                                    sizes="30vw"
+                                    srcset="images/webp/platypus-screens@1x.webp 480w, 
+                                    images/webp/platypus-screens@2x.webp 700w"
+                                    >
+                                    <img 
+                                    class="work__card-img"
+                                    sizes="30vw"
+                                    srcset="images/platypus-screens@1x.png 480w, 
+                                    images/platypus-screens@2x.png 700w"
+                                    src="images/platypus-screens@1x.png" 
+                                    alt="Platypus Adventures work page on tablet and landing page on mobile" 
+                                    >
+                                </picture>
+                                
+                            </article>
+                            <article class="work__card">
+                                <picture class="work__card-img-container">
+                                    <source type="image/webp"
+                                    sizes="40vw"
+                                    srcset="images/webp/team-up-app-screens@1x.webp 480w, 
+                                    images/webp/team-up-app-screens@2x.webp 700w"
+                                    >
+                            <img 
+                                sizes="40vw"
+                                class="work__card-img"
+                                srcset="images/team-up-app-screens@1x.png 480w, 
+                                images/team-up-app-screens@2x.png 700w"
+                                src="images/team-up-app-screens@1x.png" 
+                                alt="Team Up app home, edit, manage, swap and team screens on mobile" 
+                            >
+                        </picture>
                         <div class="work__card-content">
                             <h3 class="work__card-header">Team Up - Wanna Start a Game?</h3>
                             <p class="work__card-text">If I’m not coding or doing yoga I might be playing Ultimate Frisbee. Once a week we get together for competitive pick-up games. Captains take an attendance list and draft teams at the field. Unfortunately, this can be a rather inefficient use of daylight so I teamed up with my UX designer husband to design and build an app to solve this problem. Team Up takes a list of attendees, each with an ability rating and generates evenly matched teams. Teams are edittable after they’ve been generated in case the captains want to make adjustments. This app is currently still in production. I built it using vanilla Javascript, Node.js/Express.js and NeDB. Then, I conducted user-testing with my husband and frisbee friends. I will be using the information gleaned from the testing to make modifications and rebuild Team Up using React.</p>
