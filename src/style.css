@@ -29,6 +29,18 @@ body {
     min-height: 100vh;
     color: #000;
     font-family: var(--plain);
+    animation: fadeInAnimation ease 1.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 html, body {
@@ -39,6 +51,8 @@ html, body {
 body.is-active {
     overflow: hidden;
 }
+
+
 
 span {
     font-family: var(--fancy);
