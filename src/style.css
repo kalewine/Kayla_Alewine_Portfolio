@@ -199,13 +199,13 @@ nav.scrolled{
 
 .nav__logo.home {
     margin: 1rem 1rem 1rem 2rem;
-    height: 3rem;
+    height: 4rem;
     width: auto;
 }
 
 .nav__logo {
     margin: 0.5rem 0.5rem 0.5rem 2rem;
-    height: 2.5rem;
+    height: 3rem;
 }
 
 .nav__links {
@@ -303,17 +303,17 @@ nav.scrolled{
 
 #about-link {
     --color: var(--fuchsia);
-    text-shadow: 2px 2px 2px var(--color); 
+    text-shadow: 2px 2px 1px var(--color); 
 }
 
 #work-link {
     --color: var(--mint); 
-    text-shadow: 2px 2px 2px var(--color); 
+    text-shadow: 2px 2px 1px var(--color); 
 }
 
 #contact-link {
     --color: var(--purple); 
-    text-shadow: 2px 2px 2px var(--color); 
+    text-shadow: 2px 2px 1px var(--color); 
  }
 
  
