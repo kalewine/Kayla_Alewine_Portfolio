@@ -29,7 +29,7 @@ body {
     min-height: 100vh;
     color: #000;
     font-family: var(--plain);
-    overflow-x: clip;
+    overflow-x: hidden;
 }
 
 body.is-active {
@@ -496,16 +496,20 @@ nav.scrolled{
         z-index:-1;
         height: 35px;
         width: 35px;
+        background-color: #fff;
+        border: solid 4px var(--mint);
         border-radius: 100%;
         
     }
 
     #toggle-bars.is-active .nav__toggle-bar:nth-child(1) {
-        transform: translateY(5px) rotate(45deg);
+        transform: translateY(4px) rotate(45deg);
+        height: 4px;
     }
 
     #toggle-bars.is-active .nav__toggle-bar:nth-child(3) {
-        transform: translateY(-5px) rotate(-45deg);
+        transform: translateY(-4px) rotate(-45deg);
+        height: 4px;
     }
 
     
