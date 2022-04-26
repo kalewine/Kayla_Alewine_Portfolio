@@ -403,17 +403,17 @@ nav.scrolled{
     }
 
     .nav__links {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 8rem 5rem 30% 0;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-around;
         align-items: flex-end;
         height: 100vh;
-        background: white;
         width: 100%; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 8rem 5rem 30% 0;
+        background: white;
         z-index: -1;
         /* transform: translateX(110%); */
         transition: transform 500ms ease;
@@ -856,6 +856,14 @@ nav.scrolled{
         padding-top: 2rem;
     }
 
+    .work__card-img-container { 
+        margin: 1rem 0 2rem 0;
+    }
+
+    .work__card-img { 
+        max-width: 1000px;
+    }
+
 }
 
 @media only screen and (max-width: 640px){
@@ -893,6 +901,10 @@ nav.scrolled{
 
     .work__dots {
         top: 2%;
+    }
+
+    .work__card-img-container { 
+        margin: 2rem 0 0 0;
     }
 
 }
