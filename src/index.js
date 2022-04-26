@@ -74,6 +74,36 @@ const leaveHome = new IntersectionObserver ((entries, leaveHome) => {
 
 leaveHome.observe(target)
 
+// Toggle mobile menu
+const toggleBtn = document.getElementById('toggle-bars');
+const menu = document.getElementById('mobile-menu');
+const body = document.querySelector('body');
+const menuDots = document.getElementById('mobile-menu-dots');
+
+
+const addIsActive = [toggleBtn, menu, body, menuDots]
+
+const toggleMenu = () => {
+    addIsActive.forEach(element => element.classList.toggle('is-active'))
+    if(menu.classList.contains('is-active')){
+        addCloseTriggers()
+    }
+}
+const closeMenu = () => {
+    addIsActive.forEach(element => element.classList.remove('is-active'))
+    toggleBtn.setAttribute("onclick", "toggleMenu()")
+}
+
+// toggleMenu after link is clicked
+const addCloseTriggers = () => {
+    Array.from(navLink).forEach(element => {
+        element.setAttribute("onclick", "closeMenu()")
+    })
+    toggleBtn.setAttribute("onclick", "closeMenu()")
+  }
+  
+ 
+
 // Adjust nav link shadow according to section
 // const about = document.getElementById('about');
 // const work = document.getElementById('work');

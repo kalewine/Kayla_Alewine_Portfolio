@@ -18,12 +18,17 @@
             <a href="#home"><img class="nav__logo" src="images/kayla-alewine-logo.svg" alt="letter K over letter A initials for Kayla Alewine"></a>
             <div class="nav__squiggle-container home">
                 <a href="#about"><img class="header__squiggle home" src="images/downward-squiggle-arrow.svg" alt="thin squiggly black down arrow"></a>
-                <ul class="nav__links home">
+                <ul class="nav__links home" id="mobile-menu">
+                    <ul id="mobile-menu-dots">
+                        <li ><img src="images/narrow-fuchsia-dot-grid.svg" alt=""></li>
+                        <li class=""><img src="images/narrow-mint-green-dot-grid.svg" alt="" class="mobile-menu-dots"></li>
+                        <li class=""><img src="images/narrow-purple-dot-grid.svg" alt=""></li>
+                    </ul>
                     <li class="nav__link home" ><a href="#about" id="about-link">About</a></li>
                     <li class="nav__link home" ><a href="#work" id="work-link">Work</a></li>
                     <li class="nav__link home"><a href="#contact"  id="contact-link">Contact</a></li>
                 </ul>
-                <div class="nav__toggle" onclick="toggleMenu()" id="toggle-btn">
+                <div class="nav__toggle" id="toggle-bars" onclick="toggleMenu()" >
                     <span class="nav__toggle-bar"></span>
                     <span class="nav__toggle-bar"></span>
                     <span class="nav__toggle-bar"></span>
