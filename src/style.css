@@ -584,6 +584,7 @@ nav.scrolled{
     position: relative;
     width: 100%;
     margin: 11rem 0;
+    padding-top: 5rem;
     overflow-x: clip;
 }
 
@@ -944,8 +945,8 @@ nav.scrolled{
 /* Contact section */
 .contact {
     position: relative;
-    margin-top: 5rem;
     width: 100%;
+    margin-top: 5rem;
     overflow-x: clip;
 }
 
@@ -1023,7 +1024,8 @@ nav.scrolled{
 
 @media only screen and (max-width: 640px){
     .contact {
-        margin-top: 3rem;
+        margin-top: 0;
+        padding-top: 3rem;
     }
 
     .contact__flex {
