@@ -68,7 +68,7 @@ const addCloseTriggers = () => {
   }
 
 // dark mode/light mode toggle
-const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('toggle');
 
 checkbox.addEventListener('change', ()=>{
   document.body.classList.toggle('dark-mode');
