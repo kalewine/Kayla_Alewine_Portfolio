@@ -648,6 +648,7 @@ nav.scrolled{
     margin-top: 2rem;
     border-radius: 100%;
     max-width: 650px;
+    height: auto;
     width: 100%;
 }
 
