@@ -34,6 +34,67 @@ body {
 	animation-fill-mode: forwards;
 }
 
+/* dark mode */
+
+body.dark-mode {
+    color: #fff;
+    background-color: #000;
+}
+
+body.dark-mode .header__squiggle.home {
+    filter: invert(1);
+}
+
+body.dark-mode .work h2, body.dark-mode .work p {
+    color: #000;
+}
+
+body.dark-mode .nav__links.is-active {
+    background-color: #000;
+}
+
+body.dark-mode .nav__link.home #about-link {
+    color: var(--fuchsia);
+    text-shadow: none;
+    font-weight: 600;
+}
+
+body.dark-mode .nav__link.home #work-link {
+    color: var(--mint);
+    text-shadow: none;
+    font-weight: 600;
+}
+
+body.dark-mode .nav__link.home #contact-link {
+    color: var(--purple);
+    text-shadow: none;
+    font-weight: 600;
+}
+
+body.dark-mode.is-active .nav__logo, body.dark-mode .nav__logo.home {
+    filter: invert(1);
+}
+
+@media only screen and (max-width: 1024px){
+    body.dark-mode .nav__link #about-link {
+        color: var(--fuchsia);
+        text-shadow: none;
+        font-weight: 600;
+    }
+    
+    body.dark-mode .nav__link #work-link {
+        color: var(--mint);
+        text-shadow: none;
+        font-weight: 600;
+    }
+    
+    body.dark-mode .nav__link #contact-link {
+        color: var(--purple);
+        text-shadow: none;
+        font-weight: 600;
+    }
+}
+
 @keyframes fadeInAnimation {
 	0% {
 		opacity: 0;
@@ -243,6 +304,7 @@ nav.scrolled{
     transition: all 0.2s ease;
 }
 
+
 #mobile-menu-dots{
     display: none;
 }
@@ -256,6 +318,7 @@ nav.scrolled{
     font-size: 2rem;
     margin-right: 2rem;
     z-index: 10;
+    background-color: transparent;
     transition: all 0.2s ease;
 }
 
@@ -333,18 +396,16 @@ nav.scrolled{
 
 
 #about-link {
-    --color: var(--fuchsia);
-    text-shadow: 2px 2px 1px var(--color); 
+    text-shadow: 2px 2px 1px var(--fuchsia); 
 }
 
+
 #work-link {
-    --color: var(--mint); 
-    text-shadow: 2px 2px 1px var(--color); 
+    text-shadow: 2px 2px 1px var(--mint); 
 }
 
 #contact-link {
-    --color: var(--purple); 
-    text-shadow: 2px 2px 1px var(--color); 
+    text-shadow: 2px 2px 1px var(--purple); 
  }
 
  .nav__toggle {
@@ -901,7 +962,7 @@ nav.scrolled{
     transform: rotateY(360deg);
   }
 
-
+  
 
 @media only screen and (max-width: 1024px){
     .work__header {
