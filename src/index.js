@@ -46,7 +46,7 @@ const menuDots = document.getElementById('mobile-menu-dots');
 
 const addIsActive = [toggleBtn, menu, body, menuDots]
 
-const toggleMenu = () => {
+const openMenu = () => {
     addIsActive.forEach(element => element.classList.toggle('is-active'))
     if(menu.classList.contains('is-active')){
         addCloseTriggers()
@@ -54,7 +54,7 @@ const toggleMenu = () => {
 }
 const closeMenu = () => {
     addIsActive.forEach(element => element.classList.remove('is-active'))
-    toggleBtn.setAttribute("onclick", "toggleMenu()")
+    toggleBtn.setAttribute("onclick", "openMenu()")
 }
 
 // toggleMenu after link is clicked
@@ -62,6 +62,8 @@ const addCloseTriggers = () => {
     Array.from(navLink).forEach(element => {
         element.setAttribute("onclick", "closeMenu()")
     })
+    let logo = document.getElementById('logo');
+    logo.setAttribute('onclick', 'closeMenu()')
     toggleBtn.setAttribute("onclick", "closeMenu()")
   }
 
