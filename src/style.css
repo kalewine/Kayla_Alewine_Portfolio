@@ -627,22 +627,28 @@ nav.scrolled{
 
 
 .about__photo{
-    padding-right: 4rem; 
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    padding-right: 4rem;
 }
 
 
 
 .about__headshot-container {
     height: auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .about__headshot {
     margin-top: 2rem;
     border-radius: 100%;
     max-width: 650px;
+    width: 100%;
 }
 
 .about__bio {
@@ -676,7 +682,7 @@ nav.scrolled{
     }
 
     .about__photo {
-        width: 80%;
+        width: 50%;
         padding-right: 0;
     }
 
@@ -704,8 +710,9 @@ nav.scrolled{
     }
 
     .about__photo {
-         width: 100%;
-     }
+        width: 90%;
+    }
+
 
     .about__headshot-container{
         margin: 1rem 0;
