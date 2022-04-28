@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Kayla Alewine's Portfolio</title>
 </head>
-<body class="dark-mode">
+<body>
     <header id="home">
         <nav>
             <a href="#home"><img class="nav__logo" src="images/kayla-alewine-logo.svg" alt="letter K over letter A initials for Kayla Alewine"></a>
@@ -43,6 +43,14 @@
             <p class="header__intro">I'm <span class="header__intro-name">Kayla Alewine,</span> a web developer.</p>
         </article>
         
+        <div class="header__toggle">
+            <input type="checkbox" class="checkbox" id="checkbox">
+          <label for="checkbox" class="label">
+            <span class="iconify" id="sun" data-icon="clarity:sun-line"></span>
+            <span class="iconify" id="moon" data-icon="bi:moon-stars"></span>
+            <div class='ball'>
+          </label>
+        </div>
 
         <img class="header__dots" id="header__mint-dots" src="images/mint-dot-grid.svg" alt="mint green colored square dot grid">
         <img class="header__dots" id="header__purple-dots" src="images/purple-dot-grid.svg" alt="purple colored square dot grid">
@@ -442,6 +450,7 @@
         <a href="#home"><img class="footer__logo" src="images/kayla-alewine-logo.svg" alt="black K over A logo representing Kayla Alewine's initials"></a>
         <p class="footer__text">Designed and Built By Kayla Alewine | 2022</p>
     </footer>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

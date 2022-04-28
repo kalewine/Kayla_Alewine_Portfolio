@@ -75,6 +75,14 @@ body.dark-mode.is-active .nav__logo, body.dark-mode .nav__logo.home {
     filter: invert(1);
 }
 
+body.dark-mode .ball {
+    background-color: #000;
+}
+
+body.dark-mode .label {
+    background-color: #fff;
+}
+
 @media only screen and (max-width: 1024px){
     body.dark-mode .nav__link #about-link {
         color: var(--fuchsia);
@@ -268,6 +276,63 @@ header {
     top: 0;
 }
 
+/* dark mode toggle */
+.header__toggle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 2rem 2rem;
+}
+.checkbox {
+opacity: 0;
+position: absolute;
+}
+  
+.label {
+width: 45px;
+height: 22px;
+background-color:#111;
+display: flex;
+border-radius:50px;
+align-items: center;
+justify-content: space-between;
+padding: 5px;
+position: relative;
+transform: scale(1.5);
+}
+
+.ball {
+width: 18px;
+height: 18px;
+background-color: white;
+position: absolute;
+top: 2px;
+left: 2px;
+border-radius: 50%;
+transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+transform: translateX(23px);
+}
+
+#moon {
+color: #fff;
+}
+
+#sun {
+    color: #000;
+    }
+
+@media only screen  and (max-width: 640px){ 
+    .header__toggle {
+        bottom: initial; 
+        left: initial;
+        top: 0;
+        right: 0;
+        margin: 2rem 2rem 0 0;
+    }
+}
 /* navbar styles */
 nav.scrolled{
     display: flex;

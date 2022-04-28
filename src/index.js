@@ -64,7 +64,13 @@ const addCloseTriggers = () => {
     })
     toggleBtn.setAttribute("onclick", "closeMenu()")
   }
-  
+
+// dark mode/light mode toggle
+const checkbox = document.getElementById('checkbox');
+
+checkbox.addEventListener('change', ()=>{
+  document.body.classList.toggle('dark-mode');
+})
  
 
 // Adjust nav link shadow according to section
