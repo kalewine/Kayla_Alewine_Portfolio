@@ -87,13 +87,14 @@ const hello = document.getElementById("hello-text");
 function typeWriter(el) {
     const textArray = el.innerHTML.split('');
     el.innerHTML = '';
-    textArray.forEach((letter, i) =>
-        setTimeout(() => (el.innerHTML += letter), 200 * i)
-    );
+    setTimeout(() => {
+        textArray.forEach((letter, i) =>
+            setTimeout(() => (el.innerHTML += letter), 175 * i)
+    )}, 1000);
     setTimeout(() => Array.from(hidden).forEach(item => {
             item.classList.remove('hidden')
             item.classList.add('reveal')
-        }), 2500)
+        }), 3000)
 }
 
 window.onload = typeWriter(hello);
