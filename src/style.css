@@ -34,6 +34,16 @@ body {
 	animation-fill-mode: forwards;
 }
 
+.hidden {
+    opacity: 0;
+}
+
+.reveal {
+    animation: fadeInAnimation ease 1.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
 @keyframes fadeInAnimation {
 	0% {
 		opacity: 0;

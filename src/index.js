@@ -73,7 +73,32 @@ const checkbox = document.getElementById('toggle');
 checkbox.addEventListener('change', ()=>{
   document.body.classList.toggle('dark-mode');
 })
- 
+
+
+// onload animations
+// const headerDots = Array.from(document.getElementsByClassName('header__dots'));
+const hidden = document.getElementsByClassName('hidden');
+
+// Typing
+const letters = "Hello World!"
+const hello = document.getElementById("hello-text");
+
+
+function typeWriter(el) {
+    const textArray = el.innerHTML.split('');
+    el.innerHTML = '';
+    textArray.forEach((letter, i) =>
+        setTimeout(() => (el.innerHTML += letter), 200 * i)
+    );
+    setTimeout(() => Array.from(hidden).forEach(item => {
+            item.classList.remove('hidden')
+            item.classList.add('reveal')
+        }), 2500)
+}
+
+window.onload = typeWriter(hello);
+
+
 
 // Adjust nav link shadow according to section
 // const about = document.getElementById('about');
