@@ -34,6 +34,16 @@ body {
 	animation-fill-mode: forwards;
 }
 
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
 /* dark mode */
 
 body.dark-mode {
@@ -103,14 +113,6 @@ body.dark-mode .label {
     }
 }
 
-@keyframes fadeInAnimation {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
 
 html, body {
     max-width: 100%;
@@ -199,16 +201,20 @@ header {
 
 .header__text {
     position: relative;
-    top: 15%;
+    top: 25%;
     width: 50%;
     margin: 0 auto;
 }
 
+
+
 .header__hello {
     font-size: 4rem;
     font-weight: 300;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem;  
 }
+
+
 
 .header__intro {
     font-weight: 400;
@@ -490,12 +496,13 @@ nav.scrolled{
     }
     
     #header__purple-dots {
-        margin-left: -4rem;
+        margin-left: -6rem;
     }
 
     .header__text {
         width: 80%;
         margin: 0 auto 0 25%;
+        padding-left: 0.5rem;
     }
     
 
@@ -527,6 +534,7 @@ nav.scrolled{
         width: 100%;
         padding: 0 1rem;
         margin: 0;
+        top: 15%;
     }
     
     .header__hello {
