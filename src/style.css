@@ -12,7 +12,7 @@ html {
     --plain: 'Raleway', sans-serif;
     --fancy: 'Ribeye Marrow', serif;
     --purple: #8253EA;
-    --fuchsia: #FF427B;
+    --fuchsia: rgb(255, 66, 123);
     /* --mint: #2EFFC0; */
     --mint: #6cfacb;
     --shadow: ;
@@ -102,6 +102,15 @@ body.dark-mode .ball {
 body.dark-mode .label {
     background-color: #fff;
 }
+
+body.dark-mode .tools__grid-name, body.dark-mode .tools__header {
+    color: #000;
+}
+
+body.dark-mode .tools__grid-icon {
+    filter: invert(1);
+}
+
 
 @media only screen and (max-width: 1024px){
     body.dark-mode .nav__link #about-link {
@@ -925,10 +934,12 @@ nav.scrolled{
     justify-content: center;
     align-items: center;
 }
+
 .tools__grid-name{
     padding-top: 0.5rem;
     font-weight: 500;
     text-align: center;
+    color: #fff;
 }
 
 @media only screen and (max-width: 1024px){
