@@ -103,7 +103,8 @@ body.dark-mode .label {
     background-color: #fff;
 }
 
-body.dark-mode .tools__grid-name, body.dark-mode .tools__header {
+body.dark-mode .tools__grid-name, body.dark-mode .tools__grid-icon {
+   
     color: #000;
 }
 
@@ -378,6 +379,10 @@ nav.scrolled{
     height: 4rem;
     width: auto;
     transition: all 0.2s ease;
+}
+
+.nav__home-icon{
+    z-index: 10;
 }
 
 .nav__logo {
