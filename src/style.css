@@ -817,6 +817,8 @@ nav.scrolled{
 
 .about__bio {
     width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 .about__bio-title {
@@ -963,6 +965,10 @@ nav.scrolled{
 }
 
 @media only screen and (max-width: 640px){
+    .tools {
+        margin-top: 7rem;
+    }
+
     .tools__header {
         font-size: 1.5rem;
     }
@@ -1066,7 +1072,12 @@ nav.scrolled{
     transform: rotateY(360deg);
   }
 
-  
+  #blog-button{
+    background-color: var(--fuchsia);
+    background-image: linear-gradient(45deg, #8353ea 50%, transparent 50%);
+    margin-top: 3rem;
+    width: fit-content;
+  }
 
 @media only screen and (max-width: 1024px){
     .work__header {
@@ -1100,6 +1111,10 @@ nav.scrolled{
     .work__card-img { 
         max-width: 1000px;
     }
+
+    #blog-button{
+        margin: 3rem auto 0 auto;
+      }
 
 }
 
